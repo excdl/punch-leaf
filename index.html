@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>謝謝使用奇可智能打卡系統</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+    }
+    ...
+  </style>
+  <script>
+    const COMPANY_IPS = [
+      "114.34.60.48",
+      "220.132.124.179",
+      "125.228.248.110",
+      "114.34.128.159",
+      "220.134.230.241"
+    ];
+    ...
+  </script>
+</head>
+<body>
+  <h3>謝謝使用奇可智能打卡系統</h3>
+  <div id="currentInfo">
+    <p id="ipAddress">正在獲取 IP 地址...</p>
+    <p id="currentDate">正在獲取現在時刻...</p>
+  </div>
+  <br />
+  <div id="countdownWrapper">
+    <div id="countdownBar"></div>
+    <div id="countdownText">打卡中，請稍候...</div>
+    <div id="resultText"></div>
+  </div>
+  <div id="locationErrorText"></div>
+</body>
+</html>
