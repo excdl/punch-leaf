@@ -1,48 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>謝謝使用奇可智能打卡系統</title>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      height: 100vh;
-      margin: 0;
-      padding: 10px;
-    }
-    ...
-  </style>
-  <script>
-    const COMPANY_IPS = [
-      "114.34.60.48",
-      "220.132.124.179",
-      "125.228.248.110",
-      "114.34.128.159",
-      "220.134.230.241"
-    ];
-    ...
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>登入</title>
+<style>
+body { font-family: "Microsoft JhengHei"; max-width:400px; margin:60px auto; padding:20px; }
+label { display:block; margin:10px 0 5px; }
+input, button { width:100%; padding:10px; margin-bottom:20px; box-sizing:border-box; }
+button { background:#4CAF50; color:white; border:none; cursor:pointer; }
+</style>
 </head>
 <body>
-  <h3>謝謝使用奇可智能打卡系統</h3>
-  <div id="currentInfo">
-    <p id="ipAddress">正在獲取 IP 地址...</p>
-    <p id="currentDate">正在獲取現在時刻...</p>
-  </div>
-  <br />
-  <div id="countdownWrapper">
-    <div id="countdownBar"></div>
-    <div id="countdownText">打卡中，請稍候...</div>
-    <div id="resultText"></div>
-  </div>
-  <div id="locationErrorText"></div>
-</body>
-</html>
+<h2>管理者登入</h2>
+<label>帳號</label>
+<input type="text" id="account">
+<label>密碼</label>
+<input type="password" id="password">
+<button onclick="login()">登入</button>
+
+<script>
+const apiBase = "https://script.google.com/macros/s/YOUR_DEPLOY_URL/exec"; // 替換為你的 GAS URL
+
+async function login(){
+  const acc=document.getElementById("account").value;
+  const pwd=document.getElementById("password").va
